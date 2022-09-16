@@ -1,16 +1,17 @@
 ﻿// Написать программу вычисления произведения чисел от 1 до N
 
-void Multiplication (int n)
+int Multiplication (int n)
 {
-int count  = 1;
-int result = 1;
-while (count<=n)
-{
-result = result * count;
-count++;
+    int count  = 1;
+    int result = 1;
+    while (count<=n)
+    {
+        result = result * count;
+        count++;
+    }
+    return result;
 }
-Console.WriteLine( $"{result}");
-}
+
 Console.WriteLine("Введите число N :");
 int number  = int.Parse(Console.ReadLine());
-Multiplication(number);
+Console.WriteLine($"Произведение чисел от 1 до {number} = {Multiplication(number)}");
